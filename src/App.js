@@ -6,7 +6,7 @@ import ConfirmationPage from './containers/ConfirmationPage'
 import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
 import CheckoutPage from './containers/CheckoutPage'
 import Signup from './containers/Signup'
-import {Redirect} from 'react-router-dom'
+
 
 
 class App extends React.Component {
