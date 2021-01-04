@@ -5,16 +5,21 @@ Bestbey is an eCommerce store that brings you superior quality in electronics.
 
 Built with a Ruby on Rails API backend, and a React front-end (this file) for Flatiron School Software Engineering Program
 
+<br>
+
+---
+
+<br>
 
 ## Installation
 
 Once you fork and clone this repo
 
-Simply run npm install to install bestbey's frontend.
+Simply run  
 
-```bash
-npm install
-```
+`npm install`
+
+and you've installed bestbey's frontend.
 
 ## Usage
 
