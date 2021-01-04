@@ -9,8 +9,6 @@ Built with a Ruby on Rails API backend, and a React front-end (this file) for Fl
 
 ---
 
-<br>
-
 ## Installation
 
 Once you fork and clone this repo
@@ -21,16 +19,23 @@ Simply run
 
 and you've installed bestbey's frontend.
 
+<br>
+
+---
+
 ## Usage
 
 Once your Rails server is running
 
 Start up your react app and enjoy
 
-```bash
-npm start
-```
+`npm start`
+
+<br>
+
+---
 
 ## Live Demo
+
 [Bestbey](https://bestbey.netlify.app/)
 
