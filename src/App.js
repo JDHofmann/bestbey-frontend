@@ -1,6 +1,7 @@
 import React from 'react'
-import './App.css';
-import Home from './containers/Home'
+// import './App.css';
+import './styles/app.css';
+import Home from './containers/Home';
 import NavBar from './containers/NavBar';
 import ConfirmationPage from './containers/ConfirmationPage'
 import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
