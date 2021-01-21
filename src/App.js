@@ -105,18 +105,17 @@ class App extends React.Component {
 
   removeFromCartHandler = (skuId) => {
     // console.log(skuId)
-    if(this.state.cart.length > 0) {
       let remainingCartItems = this.state.cart.filter( item => item.sku.id !== skuId)
-      let newCart = this.state.cart.map( item =>{
+      let newCart = this.state.cart.map( item => {
         if(item.sku.id === skuId){
           item.quantity = 1
         } 
+        return item.quantity
       })
       this.setState({ cart:newCart})
       this.setState({
         cart: remainingCartItems
       })
-    }
   }
 
   searchHandler = e =>{
