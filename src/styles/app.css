@@ -10,6 +10,10 @@ body {
   text-align: center;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .displaycategory {
   font-size: 20pt;
   margin-top: 7.5vh;
@@ -235,10 +239,6 @@ select {
   height: 50px;
   padding-right: 20px;
   cursor: pointer;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 #navbar-item h2 {

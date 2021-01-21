@@ -10,6 +10,10 @@ body {
     text-align: center;
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 .displaycategory{
     font-size: 20pt;
     margin-top: 7.5vh;
@@ -38,6 +42,7 @@ body {
 
 .iconImg:hover {
     transform: scale(1.1);
+    // this should be an underline
 }
 
 .quantity {
@@ -48,7 +53,7 @@ body {
     font-size: 15pt;
 }
 
-.category{
+.category {
     width: 100%;
     float: left;
 }
@@ -94,7 +99,7 @@ body {
     height: 1px;
     overflow: hidden;
 }
-  
+
 button{
     cursor: pointer;
 }
@@ -108,19 +113,18 @@ button{
     opacity: 1;
     z-index: 10;
     transition: .5s;
-  }
-  
-  #homepage.slidetoleft{
+}
+
+#homepage.slidetoleft{
     transform: translateX(-100%) scaleX(0);
     opacity: 0;
-  }
-  
-  .errormessage{
+}
+
+.errormessage{
     color: red;
-  }
-  
-  
-  #secondpage{
+}
+
+#secondpage{
     background:white;
     position: absolute;
     margin-top: 60px;
@@ -130,14 +134,14 @@ button{
     opacity: 0;
     transform: translateX(100%) scaleX(0);
     transition:.5s;
-  }
-  
-  #secondpage.slidetoright{
+}
+
+#secondpage.slidetoright{
     transform: translateX(0%) scaleX(1);
     opacity: 1;
-  }
-  
-  .leftsidepenl{
+}
+
+.leftsidepenl{
     margin-top: 150px;
     width: 38%;
     margin-left: 2%;
@@ -146,21 +150,21 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .carouselimage{
+}
+
+.carouselimage{
     max-width: 100%;
     height: 600px;
-  }
-  
-  .rightsidepanel{
+}
+
+.rightsidepanel{
     margin-top: 25px;
     float: right;
     padding: 3%;
     width: 60%;
-  }
-  
-  select{
+}
+
+select{
     border:none;
     min-width: 100px;
     font-size: 12pt;
@@ -168,15 +172,14 @@ button{
     margin-left: 20px;
     border-bottom: 2px solid black;
     margin: 10px 5px;
-  }
-  
-  .detailQty, #detailQty {
+}
+
+.detailQty, #detailQty {
     margin: 12px;
     text-align: center;
-  }
-  
-  
-  #navbar{
+}
+
+#navbar{
     top: 0;
     position: fixed;
     height: 60px;
@@ -184,9 +187,9 @@ button{
     z-index: 1000000;
     background: white;
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
-  }
-  
-  #navbar-item{
+}
+
+#navbar-item {
     z-index: 1000001;
     position: fixed;
     color: black;
@@ -194,39 +197,35 @@ button{
     height: 60px;
     justify-content: space-between;
     display: flex;
-  }
-  
-  #navbar-item div{
+}
+
+#navbar-item div {
     display: flex;
-  }
-  
-  
-  #navbar-item h1{
+}
+
+#navbar-item h1 {
     color:black;
     font-size: 28pt;
     margin-top:8px;
     margin-left: 20px;
     font-weight: 700px;
     cursor: pointer;
-  }
-  
-  #navbar-item .loginicon, #navbar-item .loggedinicon{
+}
+
+#navbar-item .loginicon, #navbar-item .loggedinicon {
     width: auto;
-  margin-top: 5px;
+    margin-top: 5px;
     height: 50px;
     padding-right: 20px;
     cursor: pointer;
-  }
-  
-  a:hover{
-    text-decoration: none;
-  }
-  
-  #navbar-item h2{
+}
+
+
+#navbar-item h2{
     padding-top: 10px;
     padding-right:20px;
     cursor: pointer;
-  }
+}
   
   
   #slidepanel{
@@ -421,66 +420,64 @@ button{
     animation: close .3s forwards;
   }
   
-  #loginContainer div h1{
+#loginContainer div h1 {
     font-size: 30pt;
     margin-top: 20px;
     font-weight: 700px;
     letter-spacing: 2px;
-  }
-  
-  
-  @keyframes close {
+}
+
+@keyframes close {
     0%{
-      transform: scale(1);
-      opacity: 1;
+        transform: scale(1);
+        opacity: 1;
     }
     80%{
-      transform: scale(.8);
-      opacity:0;
+        transform: scale(.8);
+        opacity:0;
     }
     100%{
-      transform: scale(0);
-      opacity:0;
+        transform: scale(0);
+        opacity:0;
     }
-  }
-  
-  #loginContainer.active{
+}
+
+#loginContainer.active{
     animation: open .7s forwards;
-  }
-  
-  @keyframes open {
-    0%{
-      transform: scale(0);
-      opacity: 0;
+}
+
+@keyframes open {
+    0% {
+        transform: scale(0);
+        opacity: 0;
     }
-    55%{
-      transform: scale(1.05);
-       opacity:1;
+    55% {
+        transform: scale(1.05);
+        opacity:1;
     }
-    70%{
-      transform: scale(0.99);
-      opacity:.9;
+    70% {
+        transform: scale(0.99);
+        opacity:.9;
     }
-    90%{
-      transform: scale(1.01);
-      opacity:1;
+    90% {
+        transform: scale(1.01);
+        opacity:1;
     }
-    100%{
-      transform: scale(1);
-      opacity:1;
+    100% {
+        transform: scale(1);
+        opacity:1;
     }
-  }
-  
-  #loginContainer div{
+}
+
+#loginContainer div{
     width: 420px;
     height: 340px;;
     background: white;
     box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-  }
-  
-  
-  .loginform input{
+}
+
+.loginform input{
     width: 80%;
     margin: 10%;
     margin-top: 10px;
@@ -491,8 +488,9 @@ button{
     padding-bottom: 4px;
     font-weight: 700;
     letter-spacing: 2px;
-  }
-  .loginform button{
+}
+
+.loginform button {
     width: 60%;
     margin:auto;
     border: none;
@@ -506,15 +504,14 @@ button{
     font-weight:700;
     letter-spacing: 2px;
     transition: 1s;
-  }
-  
-  .loginform button:hover{
+}
+
+.loginform button:hover {
     transform: scale(1.03);
     letter-spacing: 6px;
-  }
-  
-  
-  .closebutton{
+}
+
+.closebutton {
     margin-top: 80px;
     border-radius: 50%;
     width: 50px;
@@ -525,29 +522,24 @@ button{
     font-size: 20pt;
     box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
-  }
-  
-  .closebutton:hover{
+}
+
+.closebutton:hover{
     opacity: 1;
     transform: scale(1.03);
-  }
-  
-  
-  
-  
-  
-  
-  /*signup form section*/
-  
-  .signupleftside{
+}
+
+/*signup form section*/
+
+.signupleftside{
     background: black;
     width: 30%;
     height: 100vh;
     z-index: 10000;
     position: fixed;
-  }
-  
-  .signupleftside h1{
+}
+
+.signupleftside h1{
     font-size: 100pt;
     width: 50%;
     color: white;
@@ -556,9 +548,9 @@ button{
     letter-spacing: 20px;
     text-orientation: mixed;
     z-index: 10000000;
-  }
-  
-  .signuprightside{
+}
+
+.signuprightside{
     margin-top: 25vh;
     float: right;
     background:white;
@@ -567,16 +559,15 @@ button{
     top: 0;
     height: 100vh;
     position: fixed;
-  }
-  
-  
-  .signupform{
+}
+    
+.signupform{
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-  }
-  
-  .signupform input{
+}
+
+.signupform input{
     width: 280px;
     margin-bottom: 20px;
     height: 30px;
@@ -586,9 +577,9 @@ button{
     padding-left: 5px;
     letter-spacing: 2px;
     font-weight: 700;
-  }
-  
-  .signupform button{
+}
+
+.signupform button{
     margin-top: 20px;
     border:none;
     border-radius: 20px;
@@ -599,178 +590,174 @@ button{
     font-weight: 700;
     color: white;
     letter-spacing: 2px;
-  }
-  
-  
-  
-  
-  
-  /* checkoutpage section*/
-  
-  #checkoutcontainer{
+}  
+
+
+/* checkoutpage section*/
+
+#checkoutcontainer{
     width: 80%;
     margin-left: 10%;
-  }
-  
-  table{
+}
+
+table {
     width: 80%;
     margin-left: 20px;
-  }
-  
-  table + button{
+}
+
+table + button {
     width: 300px;
     margin-bottom: 20vh;
-  }
-  
-  td{
+}
+
+td {
     width: 33.33%;
     padding-top: 20px;
     padding-bottom: 30px;
-  }
-  
-  #checkoutcontainer tr td h5{
+}
+
+#checkoutcontainer tr td h5 {
     font-size: 12pt;
-  }
-  
-  #checkoutcontainer tr td h4{
+}
+
+#checkoutcontainer tr td h4 {
     font-size: 15pt;
-  }
-  #checkoutcontainer tr td button{
+}
+#checkoutcontainer tr td button{
     border:none;
     background-color: rgb(255, 62, 62);
     border-radius: 20px;
     font-size: 12pt;
     padding: 5px 20px;
     font-weight: 700;
-  }
-  
-  table tr td img{
+}
+
+table tr td img{
     max-width: 180px;
     max-height: 180px;
-  }
-  
-  
-  /*acccount container*/
-  
-  .accountcontainer{
+}
+
+/*acccount container*/
+
+.accountcontainer{
     padding-left: 10px;
     padding-right: 10px;
-  }
-  
-  .orderHistory{
+}
+
+.orderHistory{
     color: #606060;
-  }
-  
-  .orderHistoryList {
+}
+
+.orderHistoryList {
     padding-left: 10px;
     padding-right: 5px;
     font-size: 10pt;
     text-align: left;
-  }
-  
-  .orderbox{
+}
+
+.orderbox{
     padding: 10px 10px;
     transition: 0.5s;
-  }
-  .orderbox:hover{
+}
+.orderbox:hover{
     box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-  }
-  
-  /*confirmation page*/
-  
-  .confirmationpage{
+}
+
+/*confirmation page*/
+
+.confirmationpage{
     width: 80%;
     margin-left: 10%;
-  }
-  
-  .confirmationpage tr:first-child{
+}
+
+.confirmationpage tr:first-child{
     font-weight: 700;
     font-size: 16pt;
     color: #404040;
-  }
-  
-  .confirmationpage tr td {
+}
+
+.confirmationpage tr td {
     width: 15%;
     text-align: center;
-  }
-  
-  .confirmationpage td:first-child{
+}
+
+.confirmationpage td:first-child{
     width: 45%;
-  }
-  
-  .confirmNum {
+}
+
+.confirmNum {
     border-bottom: 2px solid #a0a0a0;
     padding-bottom: 10px;
     color: #a00000;
-  }
-  
-  .total {
+}
+
+.total {
     margin: 15px 0;
     padding: 10px;
     border-top: 2px solid #404040;
-  }
-  
-  
-  /*mobile view section*/
-  @media (max-width: 1800px){
+}
+
+
+/*mobile view section*/
+
+@media (max-width: 1800px){
+.productcard{
+    width: 33.333%;
+    transition: .5s;
+}
+}
+
+@media (max-width: 1200px){
     .productcard{
-      width: 33.333%;
-      transition: .5s;
+        width: 50%;
+        transition: .5s;
     }
-  }
-  
-  @media (max-width: 1200px){
-    .productcard{
-      width: 50%;
-      transition: .5s;
-    }
-  
+
     .leftsidepenl{
-      margin-top: 50px;
-      width: 90%;
-      margin-left: 5%;
-      height: 500px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        margin-top: 50px;
+        width: 90%;
+        margin-left: 5%;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-  
+
     .carouselimage{
-      max-width: 100%;
-      height: 400px;
+        max-width: 100%;
+        height: 400px;
     }
-  
+
     .rightsidepanel{
-      padding: 5%;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 10vh;
+        padding: 5%;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10vh;
     }
     #secondpage{
-      height: auto;
+        height: auto;
     }
-  
+
     #checkoutcontainer tr:first-child img{
-      height: 100px;
+        height: 100px;
     }
-  
+
     #checkoutcontainer tr td h5{
-      font-size: 9pt;
+        font-size: 9pt;
     }
     #checkoutcontainer tr td h4{
-      font-size: 12pt;
+        font-size: 12pt;
     }
     #checkoutcontainer tr td button{
-      margin-right:-30px;
+        margin-right:-30px;
     }
-  }
-  
-  @media (max-width: 900px){
+}
+
+@media (max-width: 900px){
     .productcard{
-      width: 100%;
-      transition: .5s;
+        width: 100%;
+        transition: .5s;
     }
-  }
-  
+}
