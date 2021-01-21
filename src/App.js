@@ -1,6 +1,7 @@
 import React from 'react'
-import './App.css';
-import Home from './containers/Home'
+// import './App.css';
+import './styles/app.css';
+import Home from './containers/Home';
 import NavBar from './containers/NavBar';
 import ConfirmationPage from './containers/ConfirmationPage'
 import {BrowserRouter as Router, Redirect, Route} from 'react-router-dom';
@@ -20,14 +21,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/products")
+    fetch("https://bestbey-api.herokuapp.com/products")
     .then(response => response.json())
     .then(data => this.setState({products: data}))
     .catch(e => console.error(e))
   }
 
   handleUserLogin = (userObj) => {
-    fetch("http://localhost:3000/users")
+    fetch("https://bestbey-api.herokuapp.com/users")
     .then(response => response.json())
     .then(users => this.findUser(users, userObj))
   }

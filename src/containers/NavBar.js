@@ -48,7 +48,7 @@ class NavBar extends React.Component {
       return(
         <div>
           <div id="navbar-item">
-            <Link to="/"><h3>BESTBEY</h3></Link>
+            <Link to="/"><h1>BESTBEY</h1></Link>
             <div>
               <Search searchHandler={this.props.searchHandler} className="searchbar"/>
               {this.props.user.id === undefined?
