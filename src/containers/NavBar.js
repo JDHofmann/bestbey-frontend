@@ -46,44 +46,30 @@ class NavBar extends React.Component {
 
     render(){
       return(
-        <div>
-          <div id="navbar-item">
+        <>
+          <div id="navbar">
             <Link to="/"><h1>BESTBEY</h1></Link>
-            <div>
+            {/* <div> */}
               <Search searchHandler={this.props.searchHandler} className="searchbar"/>
               {this.props.user.id === undefined?
-                // <img 
-                //   alt="logout"
-                //   src={logouticon} 
-                //   className="loginicon" 
-                //   onClick={this.popupClickHandler}/>
                 <button 
-                  className="login-btn btn"
+                  className="login-btn btn nav-item"
                   onClick={this.props.handleUserLogin}
                 >Login</button>
                 :
                 <>
                   <button 
-                    className="cart-btn btn"
+                    className="cart-btn btn nav-item"
                     onClick={this.clickHandler} 
                   >Cart</button>
                   <button 
-                    className="account-btn btn"
+                    className="account-btn btn nav-item"
                     onClick={this.accountClickHandler}
                   >Account</button>
-                  {/* <img 
-                    onClick={this.clickHandler} 
-                    alt="shopping cart"
-                    src={shoppingcart} className="loggedinicon" />
-                  <img 
-                    alt="login button"
-                    src={loggedinicon} 
-                    onClick={this.accountClickHandler} className="loggedinicon" /> */}
                 </>
               }
             </div>
-          </div>
-          <div id="navbar"></div>
+          {/* </div> */}
           <SlidePanel
             cart={this.props.cart}
             removeFromCartHandler={this.props.removeFromCartHandler}
@@ -99,7 +85,7 @@ class NavBar extends React.Component {
             handleUserLogin={this.props.handleUserLogin}
             user={this.props.user}
             />
-        </div>
+        </>
       )
     }
 }
