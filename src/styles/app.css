@@ -68,10 +68,12 @@ a:hover, a:focus {
   width: 100%;
   text-align: center;
   height: 5vmax;
+  max-height: 40px;
 }
 
 #navbar .nav-item {
   height: 5vmax;
+  max-height: 40px;
   width: 100%;
   max-width: 100px;
 }
