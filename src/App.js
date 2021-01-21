@@ -57,7 +57,7 @@ class App extends React.Component {
         password: newUserData.password
       })
     }
-    fetch("http://localhost:3000/users",options)
+    fetch("https://bestbey-api.herokuapp.com/users",options)
     .then(response => response.json())
     .then(user => {
       this.setState({user:user})
