@@ -23,7 +23,7 @@ class Home extends React.Component {
   }
 
   renderCategory = () =>{
-    {this.filterCategory()}
+    this.filterCategory()
     return this.state.categories.map(category=>{
       let categoryProducts = this.props.products.filter( product => product.category === category)
       return <ProductCategory key={category}
