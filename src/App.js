@@ -112,11 +112,11 @@ class App extends React.Component {
           item.quantity = 1
         } 
       })
+      this.setState({ cart:newCart})
+      this.setState({
+        cart: remainingCartItems
+      })
     }
-    this.setState({ cart:newCart})
-    this.setState({
-      cart: remainingCartItems
-    })
   }
 
   searchHandler = e =>{
