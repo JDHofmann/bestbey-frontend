@@ -1,85 +1,77 @@
-*{
-    outline:none;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none;
-    -webkit-user-drag: none;
+* {
+    // outline:none;
     list-style-type: none;
-  }
-  
-  html{
+}
+
+html{
     scroll-behavior: smooth;
-  }
-  body {
+}
+body {
     text-align: center;
-  }
-  
-  
-  .displaycategory{
+}
+
+.displaycategory{
     font-size: 20pt;
-    margin-top: 50px;
+    margin-top: 7.5vh;
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
-  }
-  
-  .displaycategory a{
+    overflow-y: scroll;
+}
+
+.displaycategory a {
     font-size: 13pt;
     margin: 0px 25px;
-    height:75px;
-  }
-  
-  .displaycategory a p{
+    // height:75px;
+}
+
+.displaycategory a p {
     padding-top: 10px;
     align-self:baseline;
-  }
-  
-  .iconImg {
-    height: 60px;
+}
+
+.iconImg {
+    min-height: 60px;
+    height: 7.5vh;
     transition: .5s;
-  }
-  
-  .iconImg:hover{
+}
+
+.iconImg:hover {
     transform: scale(1.1);
-  }
-  
-  
-  .quantity{
+}
+
+.quantity {
     border: 2px solid black;
     width: 60px;
     padding-left: 14px;
     font-weight: 700;
     font-size: 15pt;
-  }
-  
-  .category{
+}
+
+.category{
     width: 100%;
     float: left;
-  }
-  
-  .category h1{
+}
+
+.category h2 {
     text-align: left;
-    padding-top: 100px;
-    height: 150px;
+    padding-top: 10vh;
+    // height: 150px;
     padding-left: 30px;
     font-size: 20pt;
     font-weight: 700;
     letter-spacing: 3px;
     cursor: pointer;
-  }
-  
-  
-  .hrline{
+}
+
+.hrline {
     width: 60%;
     margin-top: 30px;
     margin-bottom: 40px;
     border: 1px solid lightgrey;
-  }
-  
-  .searchbar{
+}
+
+.searchbar {
     margin-top: 15px;
     margin-right: 20px;
     border-radius: 20px;
@@ -92,22 +84,22 @@
     padding-left: 10px;
     font-size: 12pt;
     text-align: center;
-  }
-  
-  .sr-only {
+}
+
+.sr-only {
     position: absolute;
     left: -100000px;
     top: auto;
     width: 1px;
     height: 1px;
     overflow: hidden;
-  }
+}
   
-  button{
+button{
     cursor: pointer;
-  }
-  
-  #homepage{
+}
+
+#homepage{
     position: absolute;
     width: 96%;
     margin-left: 2%;
@@ -209,7 +201,7 @@
   }
   
   
-  #navbar-item h3{
+  #navbar-item h1{
     color:black;
     font-size: 28pt;
     margin-top:8px;
