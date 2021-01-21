@@ -43,7 +43,7 @@ a:hover, a:focus {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  max-height: 13vh;
+  max-height: 13vmax;
   width: 100%;
   z-index: 1000000;
   background: #202020;
@@ -54,8 +54,10 @@ a:hover, a:focus {
 
 #navbar h1 {
   color: #ffffff;
-  font-size: 5vh;
+  font-size: 5vmax;
   font-weight: 700px;
+  padding: 0;
+  margin: 2vmax;
 }
 
 #navbar .searchbar {
@@ -65,11 +67,11 @@ a:hover, a:focus {
   background: #ffffff;
   width: 100%;
   text-align: center;
-  height: 5vh;
+  height: 5vmax;
 }
 
 #navbar .nav-item {
-  height: 5vh;
+  height: 5vmax;
   width: 100%;
   max-width: 100px;
 }

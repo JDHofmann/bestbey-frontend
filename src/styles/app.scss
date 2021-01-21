@@ -44,7 +44,7 @@ a {
     grid-gap: 5px;
     align-items: center;
     justify-items: center;
-    max-height: 13vh;
+    max-height: 13vmax;
     width: 100%;
     z-index: 1000000;
     background: $black-0;
@@ -52,9 +52,10 @@ a {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     h1 {
         color: $white-0;
-        font-size: 5vh;
+        font-size: 5vmax;
         font-weight: 700px;
-        // padding: 0 5vw;
+        padding: 0;
+        margin: 2vmax;
     }
     .searchbar {
         @include border();
@@ -64,10 +65,10 @@ a {
         // letter-spacing: 2px;
         // font-size: 12pt;
         text-align: center;
-        height: 5vh;
+        height: 5vmax;
     }
     .nav-item {
-        height: 5vh;
+        height: 5vmax;
         width: 100%;
         max-width: 100px;
     }
