@@ -1,5 +1,7 @@
 * {
   list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -10,13 +12,25 @@ body {
   text-align: center;
 }
 
-a:hover {
+a {
+  color: #202020;
   text-decoration: none;
 }
 
+a:hover, a:focus {
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-decoration: underline;
+}
+
+.btn {
+  border: 1px solid #202020;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
 .displaycategory {
-  font-size: 20pt;
-  margin-top: 7.5vh;
+  margin: 7.5vh auto 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,11 +38,20 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   overflow-y: scroll;
+  width: 90vw;
+  max-width: 850px;
 }
 
 .displaycategory a {
-  font-size: 13pt;
+  font-size: 2.75vmax;
   margin: 0px 25px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.displaycategory a .iconImg {
+  min-height: 60px;
+  height: 7.5vh;
 }
 
 .displaycategory a p {
@@ -37,16 +60,8 @@ a:hover {
       align-self: baseline;
 }
 
-.iconImg {
-  min-height: 60px;
-  height: 7.5vh;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.iconImg:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.displaycategory a:hover, .displaycategory a:focus p {
+  text-decoration: underline;
 }
 
 .quantity {
@@ -233,7 +248,7 @@ select {
   cursor: pointer;
 }
 
-#navbar-item .loginicon, #navbar-item .loggedinicon {
+#navbar-item {
   width: auto;
   margin-top: 5px;
   height: 50px;
@@ -504,11 +519,6 @@ select {
   }
 }
 
-#loginContainer.active {
-  -webkit-animation: open .7s forwards;
-          animation: open .7s forwards;
-}
-
 @-webkit-keyframes open {
   0% {
     -webkit-transform: scale(0);
@@ -563,51 +573,6 @@ select {
             transform: scale(1);
     opacity: 1;
   }
-}
-
-#loginContainer div {
-  width: 420px;
-  height: 340px;
-  background: white;
-  -webkit-box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.3);
-          box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
-}
-
-.loginform input {
-  width: 80%;
-  margin: 10%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-  border-bottom: 3px solid black;
-  font-size: 12pt;
-  padding-bottom: 4px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.loginform button {
-  width: 60%;
-  margin: auto;
-  border: none;
-  font-size: 16pt;
-  margin-top: 20px;
-  border-radius: 20px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: black;
-  color: white;
-  font-weight: 700;
-  letter-spacing: 2px;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-.loginform button:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03);
-  letter-spacing: 6px;
 }
 
 .closebutton {

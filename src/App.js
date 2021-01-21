@@ -26,10 +26,13 @@ class App extends React.Component {
     .catch(e => console.error(e))
   }
 
-  handleUserLogin = (userObj) => {
+  handleUserLogin = () => {
     fetch("https://bestbey-api.herokuapp.com/users")
     .then(response => response.json())
-    .then(users => this.findUser(users, userObj))
+    .then(users => this.findUser(users, {
+      username: "test-user",
+      password: "123456"
+    }))
   }
 
   findUser = (users, userObj) =>{

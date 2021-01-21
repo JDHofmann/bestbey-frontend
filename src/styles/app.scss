@@ -1,48 +1,58 @@
+$black-0: #202020;
+
+$white-0: #ffffff;
+
 * {
-    // outline:none;
     list-style-type: none;
+    box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 body {
     text-align: center;
 }
 
-a:hover{
+a {
+    color: $black-0;
     text-decoration: none;
+    &:hover, &:focus {
+        transition: .3s;
+        text-decoration: underline;
+    }
 }
 
-.displaycategory{
-    font-size: 20pt;
-    margin-top: 7.5vh;
+.btn {
+    border: 1px solid $black-0;
+    background: $white-0;
+    border-radius: 5px;
+}
+
+.displaycategory {
+    margin: 7.5vh auto 0;
     display: flex;
-    // justify-content: center;
     align-items: center;
     overflow-y: scroll;
+    width: 90vw;
+    max-width: 850px;
 }
 
 .displaycategory a {
-    font-size: 13pt;
+    font-size: 2.75vmax;
     margin: 0px 25px;
-    // height:75px;
-}
-
-.displaycategory a p {
-    padding-top: 10px;
-    align-self:baseline;
-}
-
-.iconImg {
-    min-height: 60px;
-    height: 7.5vh;
     transition: .5s;
-}
-
-.iconImg:hover {
-    transform: scale(1.1);
-    // this should be an underline
+    .iconImg {
+        min-height: 60px;
+        height: 7.5vh;
+    }
+    p {
+        padding-top: 10px;
+        align-self: baseline;
+    }
+    &:hover, &:focus p{
+        text-decoration: underline;
+    }
 }
 
 .quantity {
@@ -100,7 +110,7 @@ a:hover{
     overflow: hidden;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -164,7 +174,7 @@ button{
     width: 60%;
 }
 
-select{
+select {
     border:none;
     min-width: 100px;
     font-size: 12pt;
@@ -212,7 +222,7 @@ select{
     cursor: pointer;
 }
 
-#navbar-item .loginicon, #navbar-item .loggedinicon {
+#navbar-item {
     width: auto;
     margin-top: 5px;
     height: 50px;
@@ -221,14 +231,13 @@ select{
 }
 
 
-#navbar-item h2{
+#navbar-item h2 {
     padding-top: 10px;
     padding-right:20px;
     cursor: pointer;
 }
-  
-  
-  #slidepanel{
+
+#slidepanel{
     right:0;
     top: 0;
     position: fixed;
@@ -240,25 +249,23 @@ select{
     transform: translateX(300px) scale(0.5) rotateY(120deg);
     box-shadow: 5px 10px 10px 10px rgba(0, 0, 0, 0.3);
     transition: .4s;
-  
-  }
-  
-  #slidepanel.active{
+}
+
+#slidepanel.active{
     opacity: 1;
     transform: translateX(0px) scale(1) rotateY(0deg);
-  }
-  
-  .cart{
+}
+
+.cart{
     height: 90vh;
     overflow: scroll;
-  }
-  
-  .cart::-webkit-scrollbar{
+}
+
+.cart::-webkit-scrollbar{
     scroll-behavior: smooth;
-  }
-  
-  
-  .cartcontainer{
+}
+    
+.cartcontainer{
     height: auto;
     width: 90%;
     margin-top: 15px;
@@ -266,27 +273,27 @@ select{
     border-bottom: 2px solid black;
     padding-bottom: 15px;
     transition: .5s;
-  }
-  .cartcontainer:hover{
+}
+.cartcontainer:hover{
     transform: scale(1.01);
-  }
-  
-  .cartcontainer div h6{
+}
+
+.cartcontainer div h6 {
     margin:0px;
     padding-bottom: 10px;
     font-size: 8pt;
-  }
-  
-  .cartcontainer div h5{
+}
+
+.cartcontainer div h5 {
     margin: 0px;
     padding-top: 0px;
     font-size: 12pt;
     font-weight: 700;
     text-align: center;
     padding-bottom: 20px;
-  }
-  
-  .cartcontainer div button{
+}
+
+.cartcontainer div button{
     border-radius: 20px;
     border:none;
     background: rgb(250, 55, 55);
@@ -297,32 +304,32 @@ select{
     letter-spacing: 1px;
     opacity: 0.6;
     transition: 0.5s;
-  }
-  
-  .checkoutDelete{
+}
+
+.checkoutDelete{
     transition: 0.5s;
     background: rgb(250, 55, 55);
     opacity: 0.6;
-  }
-  
-  .cartcontainer div button:hover, .checkoutDelete:hover{
+}
+
+.cartcontainer div button:hover, .checkoutDelete:hover{
     opacity: 1;
     transform: scale(1.04);
-  }
-  
-  .cartcontainer img{
+}
+
+.cartcontainer img{
     float:left;
     width: 70px;
     margin-right: 10px;
-  }
-  
-  .cartQty{
+}
+
+.cartQty{
     max-width: 50px;
     text-align: center;
     margin: 10px;
-  }
-  
-  #logoutbutton{
+}
+
+#logoutbutton{
     bottom:0;
     left: 0;
     padding-bottom: 5px;
@@ -336,16 +343,16 @@ select{
     height: 70px;
     font-weight: 700;
     transition: .6s;
-  }
-  
-  #logoutbutton:hover{
+}
+
+#logoutbutton:hover {
     background-color: white;
     opacity: 0.8;
     letter-spacing: 2px;
     color: black;
-  }
-  
-  .productcard{
+}
+
+.productcard {
     cursor: pointer;
     float: left;
     width: 25%;
@@ -354,36 +361,35 @@ select{
     margin-top:0px;
     z-index: 0;
     transition: .5s;
-  }
-  
-  
-  .productcard:hover{
+}
+
+.productcard:hover{
     box-shadow: 0px 10px 40px 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.01);
     z-index: 10000;
-  }
-  
-  .productcard div img{
+}
+
+.productcard div img{
     float: left;
     max-width: 240px;
     height: 200px;
     margin: 10px;
     object-fit: cover;
-  }
-  
-  .productcard h4{
+}
+
+.productcard h4{
     padding: 15px;
     font-size: 13pt;
-  }
-  .productcard h5{
+}
+.productcard h5{
     font-size: 12pt;
     font-weight: 700;
     letter-spacing: 2px;
     color: #606060;
     padding-top: 15px;
-  }
-  
-  .cardbuttons{
+}
+
+.cardbuttons {
     border-radius: 20px;
     padding: 5px 10px;
     font-size: 11pt;
@@ -392,23 +398,23 @@ select{
     color: white;
     border: none;
     margin-top: 20px;
-  }
-  
-  .addbutton{
+}
+
+.addbutton{
     margin-top: 10px;
     font-size: 22px;
     padding: 10px 20px;
     border-radius: 50px;
     background-color: rgb(19, 191, 10);
     transition: .5s;
-  }
-  
-  .addbutton:hover{
+}
+
+.addbutton:hover{
     transform: scale(1.02);
     letter-spacing: 2px;
-  }
-  
-  #loginContainer{
+}
+
+#loginContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -418,8 +424,8 @@ select{
     z-index: 100000;
     opacity: 1;
     animation: close .3s forwards;
-  }
-  
+}
+
 #loginContainer div h1 {
     font-size: 30pt;
     margin-top: 20px;
@@ -442,9 +448,9 @@ select{
     }
 }
 
-#loginContainer.active{
-    animation: open .7s forwards;
-}
+// #loginContainer.active{
+//     animation: open .7s forwards;
+// }
 
 @keyframes open {
     0% {
@@ -469,47 +475,47 @@ select{
     }
 }
 
-#loginContainer div{
-    width: 420px;
-    height: 340px;;
-    background: white;
-    box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-}
+// #loginContainer div{
+//     width: 420px;
+//     height: 340px;;
+//     background: white;
+//     box-shadow: -10px 10px 20px 10px rgba(0, 0, 0, 0.3);
+//     border-radius: 20px;
+// }
 
-.loginform input{
-    width: 80%;
-    margin: 10%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 3px solid black;
-    font-size: 12pt;
-    padding-bottom: 4px;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
+// .loginform input{
+//     width: 80%;
+//     margin: 10%;
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+//     border: none;
+//     border-bottom: 3px solid black;
+//     font-size: 12pt;
+//     padding-bottom: 4px;
+//     font-weight: 700;
+//     letter-spacing: 2px;
+// }
 
-.loginform button {
-    width: 60%;
-    margin:auto;
-    border: none;
-    font-size: 16pt;
-    margin-top: 20px;
-    border-radius: 20px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    background-color: black;
-    color: white;
-    font-weight:700;
-    letter-spacing: 2px;
-    transition: 1s;
-}
+// .loginform button {
+//     width: 60%;
+//     margin:auto;
+//     border: none;
+//     font-size: 16pt;
+//     margin-top: 20px;
+//     border-radius: 20px;
+//     padding-top: 4px;
+//     padding-bottom: 4px;
+//     background-color: black;
+//     color: white;
+//     font-weight:700;
+//     letter-spacing: 2px;
+//     transition: 1s;
+// }
 
-.loginform button:hover {
-    transform: scale(1.03);
-    letter-spacing: 6px;
-}
+// .loginform button:hover {
+//     transform: scale(1.03);
+//     letter-spacing: 6px;
+// }
 
 .closebutton {
     margin-top: 80px;
